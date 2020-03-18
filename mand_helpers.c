@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 
 /**
  * _printchar - prints char when called by format tag in printf
@@ -24,6 +25,7 @@ int _printstr(va_list args)
 	int count = 0;
 	int i;
 	char *str = va_arg(args, char *);
+	char *null_string = "(null)";
 
 	if (str)
 	{
@@ -32,6 +34,16 @@ int _printstr(va_list args)
 			_putchar(str[i]);
 			count++;
 		}
+	}
+
+	if (!str)
+	{
+		for (i = 0; null_string[i]; i++)
+		{
+			_putchar(null_string[i]);
+			count++;
+		}
+		return (count);
 	}
 	return (count);
 }
@@ -54,12 +66,15 @@ int _printnum(va_list args)
 		n = -n;
 	}
 
-	while (n / pow_10 > 9)
+	if (n > 9)
 	{
-		pow_10 *= 10;
+		while (n / pow_10 > 9)
+		{
+			pow_10 *= 10;
+		}
+		_putchar(n / pow_10 + '0');
+		count++;
 	}
-	_putchar(n / pow_10 + '0');
-	count++;
 
 	if (n > 0)
 	{
