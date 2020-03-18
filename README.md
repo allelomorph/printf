@@ -17,6 +17,16 @@ The character % is followed by zero or more of the following flags:
 #### s
 *The const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to (but not including) a terminating null byte ('\0')
 
+## Example
+'_printf("String:[%s]\n", "I am a string !");'
+#### Result:
+String: [I am a string!]
+
+
+'_printf("Number:[%d]\n", "1234567");'
+#### Result:
+Number:[1234567]
+
 ---
 
 ## Files:
