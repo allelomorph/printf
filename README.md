@@ -18,10 +18,18 @@ The character % is followed by zero or more of the following flags:
 * The int argument is converted to signed decimal notation. The default precision is 1.
 #### o
 * The unsigned int argument is written in octal format.
+#### %
+* The percent character is escaped by itself, as with \%.
 #### p
 * The long unsigned int argument is converted to hex to be written as a pointer.
+#### R
+* The const char * argument is written in rot13 encoding.
+#### r
+* The const char * argument is written backwards.
 #### s
 *The const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to (but not including) a terminating null byte ('\0')
+#### u
+* The unsigned int argument is written in base 10 format.
 #### x
 * The unsigned int argument is written in lowercase hex format.
 #### X
