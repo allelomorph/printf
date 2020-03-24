@@ -8,20 +8,29 @@
 /**
   * struct datatype - datatype struct
   * @f_ptr: function pointer
-  * @type: data type to match
+  * @tag: data type to match
   */
 
 typedef struct datatype
 {
-	char *type;
+	char *tag;
 	int (*f_ptr)(va_list args);
 } data_t;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int _printchar(va_list args);
-int _printstr(va_list args);
-int _printnum(va_list args);
-int _printp(va_list args);
+int b_print(va_list args);
+int c_print(va_list args);
+int di_print(va_list args);
+int o_print(va_list args);
+int p_print(va_list args);
+int perc_print(va_list args);
+int r_print(va_list args);
+int R_print(va_list args);
+int s_print(va_list args);
+int S_print(va_list args);
+int u_print(va_list args);
+int x_print(va_list args);
+int X_print(va_list args);
 
 #endif
