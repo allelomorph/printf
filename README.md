@@ -10,12 +10,23 @@
 
 ## Flag Characters / Conversion Specifiers
 The character % is followed by zero or more of the following flags:
-#### d, i
-* The int argument is converted to signed decimal notation. The default precision is 1.
+#### b
+* The unsigned int argument is written in binary.
 #### c
 * The int argument is converted to an unsigned char, and the resulting character is written.
+#### d, i
+* The int argument is converted to signed decimal notation. The default precision is 1.
+#### o
+* The unsigned int argument is written in octal format.
+#### p
+* The long unsigned int argument is converted to hex to be written as a pointer.
 #### s
 *The const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to (but not including) a terminating null byte ('\0')
+#### x
+* The unsigned int argument is written in lowercase hex format.
+#### X
+* The unsigned int argument is written in uppercase hex format.
+
 
 ## Example
 '_printf("String:[%s]\n", "I am a string !");'
