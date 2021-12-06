@@ -1,3 +1,9 @@
+### Notes
+* This project, also known as [(228) 0x11. C - printf](https://github.com/allelomorph/holbertonschool-low_level_programming/tree/master/0x11-printf), was created in a repository separate from [`holbertonschool-low_level_programming`](https://github.com/allelomorph/holbertonschool-low_level_programming), where the other projects from this section are located.
+* What follows is the original README submitted for the project.
+
+---
+
 # 0x11. C - printf
 
 ## Description
